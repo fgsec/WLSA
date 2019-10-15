@@ -1,0 +1,108 @@
+-
+    name: "Java file Stream/Reader or File Access"
+    type: "string"
+    match:
+      - "java.io.FileOutputStream"
+      - "java.io.FileReader"
+      - "java.io.RandomAccessFile"
+      - "java.io.FileInputStream"
+      - "java.io.File"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java Class Loader (Possible RCE)"
+    type: "string"
+    match:
+      - "java.lang.ClassLoader.defineClass"
+      - "java.net.URLClassLoader"
+      - "System.load"
+      - "System.loadLibrary"
+      - "Runtime.exec"
+      - "ScriptEngineManager"
+    action: "nothing"
+    result: "info"
+-
+    name: "RULE - Setting Session"
+    type: "string"
+    match:
+      - "httpservletrequest.getSession(true)"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java Download File"
+    type: "string"
+    match:
+      - "java.io.ByteArrayOutputStream"
+    action: "nothing"
+    result: "info"
+-
+    name: "RULE - Check if Session exists"
+    type: "string"
+    match:
+      - "if(httpsession == null)"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java HTTP Request"
+    type: "string"
+    match:
+      - "HttpURLConnection"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java PDF Creator (Tidy)"
+    type: "string"
+    match:
+      - "Tidy"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java File Upload"
+    type: "string"
+    match:
+      - "org.apache.commons.fileupload.DiskFileUpload"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java Weak Random value Generator"
+    type: "string"
+    match:
+      - "java.util.Random"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java Document Builder XML"
+    type: "string"
+    match:
+      - "newDocumentBuilder"
+      - "SAXParser"
+      - "XMLReader"
+      - "DocumentBuilder"
+      - "Transformer"
+      - "TransformerFactory"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java SQL Query"
+    type: "string"
+    match:
+      - "SqlUtil.execQuery"
+      - "createQuery"
+      - "stmt.executeQuery"
+      - "prepareStatement"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java Crypto"
+    type: "string"
+    match:
+      - "Cipher.getInstance"
+    action: "nothing"
+    result: "info"
+-
+    name: "Java SMTP"
+    type: "string"
+    match:
+      - "setSmtpPort"
+    action: "nothing"
+    result: "info"
