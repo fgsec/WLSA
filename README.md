@@ -5,7 +5,7 @@ Weblogic Security Assessment
 
 ## Purpose
 
-Imagine that during an engagement you were able to download an entire weblogic cluster, and you now want to filter and parse only important stuff, like functions that may be vulnerable to RCE, LFI and so on. This tool will do exactly that, searching all folders for XML files, parsing files and even decompiling classes (with the help from JAD). 
+Imagine that during an engagement you downloaded an entire weblogic cluster, and you now want to filter and parse only important stuff, like functions that may be vulnerable to RCE, LFI and so on. This tool will do exactly that, searching all folders for XML files, parsing files and even decompiling classes (with the help from JAD). 
 
 ## Install
 
