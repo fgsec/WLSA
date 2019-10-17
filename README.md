@@ -1,8 +1,29 @@
 # WLSA
 Weblogic Security Assessment
 
-**This tool is under development - Python3**
+**UNDER DEVELOPMENT**
 
-The purpose of this tool is to provide an easy way to parse and filter applications that are structured in an weblogic cluster. If, for some reason, you are interested in using it - check out the rules folder.
+## Purpose
+
+Imagine that during an engagement you were able to download an entire weblogic cluster, and you now want to filter and parse only important stuff, like functions that may be vulnerable to RCE, LFI and so on. This tool will do exactly that, searching all folders for XML files, parsing files and even decompiling classes (with the help from JAD). 
+
+## Install
+
+```
+pip3 install -r requirements.txt
+```
+
+## Usage
+
+```
+python3 main.py -folder /projects/weblogic_cluster/
+```
+
+## Todo
+
+* Create Viewer class, to export in general formats (HTML,XML and so on).
+* Develop the "action" system, to do actions based on rules.
+* Add more detection rules.
+* Improve detection logic to accept regexp
 
 
